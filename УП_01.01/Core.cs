@@ -9,5 +9,10 @@ namespace УП_01._01
     internal class Core
     {
         public static ReadWriteEntities Context = new ReadWriteEntities();
+
+        public static void ResetContext()
+        {
+            Context = new ReadWriteEntities();
+        }
     }
 }
