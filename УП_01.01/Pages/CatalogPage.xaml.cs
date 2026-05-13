@@ -77,11 +77,10 @@ namespace УП_01._01.Pages
             if (CmbGenre.SelectedIndex > 0)
             {
                 string genre = CmbGenre.SelectedItem.ToString();
-                var bookIds = Core.Context.BookGenre
-                    .Where(bg => bg.Genres.Name == genre)
-                    .Select(bg => bg.BookId)
-                    .ToList();
-                result = result.Where(b => bookIds.Contains(b.BookId));
+                result = result.Where(b =>
+                    Core.Context.Books
+                        .FirstOrDefault(book => book.BookId == b.BookId)
+                        .Genres.Any(g => g.Name == genre));
             }
 
             if (CmbSort.SelectedIndex == 1)
