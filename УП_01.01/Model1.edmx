@@ -650,7 +650,7 @@
           <End Role="Books" Type="Self.Books" Multiplicity="*" />
           <End Role="Genres" Type="Self.Genres" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="ReadWriteEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ReadWriteEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Books" EntityType="Self.Books" />
           <EntitySet Name="Complaints" EntityType="Self.Complaints" />
           <EntitySet Name="Genres" EntityType="Self.Genres" />
@@ -722,7 +722,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ReadWriteModelContainer" CdmEntityContainer="ReadWriteEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ReadWriteModelContainer" CdmEntityContainer="ReadWriteEntities1">
           <EntitySetMapping Name="Books">
             <EntityTypeMapping TypeName="ReadWriteModel.Books">
               <MappingFragment StoreEntitySet="Books">

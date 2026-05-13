@@ -13,10 +13,10 @@ namespace УП_01._01
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ReadWriteEntities : DbContext
+    public partial class ReadWriteEntities1 : DbContext
     {
-        public ReadWriteEntities()
-            : base("name=ReadWriteEntities")
+        public ReadWriteEntities1()
+            : base("name=ReadWriteEntities1")
         {
         }
     
