@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace УП_01._01
+{
+    public static class CurrentUser
+    {
+        public static Users User { get; set; }
+        public static bool IsAdmin => User?.RoleId == 3;
+        public static bool IsAuthor => User?.RoleId == 2;
+        public static bool IsFrozen => User?.IsFrozen == true;
+
+    }
+}
