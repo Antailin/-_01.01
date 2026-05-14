@@ -16,8 +16,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="Администрирование"
-                   FontSize="22" FontWeight="Bold"
-                   Margin="0,0,0,16"/>
+                   FontSize="22" FontWeight="Bold" Margin="0,0,0,16"/>
 
         <WrapPanel Grid.Row="1" Margin="0,0,0,16">
             <Button Content="Жалобы" Margin="0,0,8,0"
@@ -30,8 +29,7 @@
                     Padding="12,6" Click="BtnTabUsers_Click"/>
         </WrapPanel>
 
-        <ScrollViewer Grid.Row="2"
-                      VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <StackPanel>
 
                 <StackPanel x:Name="PanelComplaints">
@@ -46,17 +44,11 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0">
-                                            <TextBlock Text="{Binding From}"
-                                                       FontWeight="Bold"/>
-                                            <TextBlock Text="{Binding Target}"
-                                                       Foreground="Gray"
-                                                       Margin="0,4,0,0"/>
-                                            <TextBlock Text="{Binding Reason}"
-                                                       Margin="0,4,0,0"/>
+                                            <TextBlock Text="{Binding From}" FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding Target}" Foreground="Gray" Margin="0,4,0,0"/>
+                                            <TextBlock Text="{Binding Reason}" Margin="0,4,0,0"/>
                                         </StackPanel>
-                                        <Button Grid.Column="1"
-                                                Content="Удалить"
-                                                Padding="8,6"
+                                        <Button Grid.Column="1" Content="Удалить" Padding="8,6"
                                                 Tag="{Binding ComplaintId}"
                                                 Click="BtnDeleteComplaint_Click"/>
                                     </Grid>
@@ -66,8 +58,7 @@
                     </ItemsControl>
                 </StackPanel>
 
-                <StackPanel x:Name="PanelUnfreeze"
-                            Visibility="Collapsed">
+                <StackPanel x:Name="PanelUnfreeze" Visibility="Collapsed">
                     <ItemsControl x:Name="UnfreezeList">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
@@ -79,25 +70,16 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0">
-                                            <TextBlock Text="{Binding UserLogin}"
-                                                       FontWeight="Bold"/>
-                                            <TextBlock Text="{Binding Reason}"
-                                                       Foreground="Gray"
-                                                       Margin="0,4,0,0"/>
+                                            <TextBlock Text="{Binding UserLogin}" FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding Reason}" Foreground="Gray" Margin="0,4,0,0"/>
                                         </StackPanel>
-                                        <StackPanel Grid.Column="1"
-                                                    Orientation="Horizontal">
-                                            <Button Content="Одобрить"
-                                                    Padding="8,6"
-                                                    Margin="0,0,8,0"
-                                                    Background="#27AE60"
-                                                    Foreground="White"
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                            <Button Content="Одобрить" Padding="8,6" Margin="0,0,8,0"
+                                                    Background="#27AE60" Foreground="White"
                                                     Tag="{Binding RequestId}"
                                                     Click="BtnApproveUnfreeze_Click"/>
-                                            <Button Content="Отклонить"
-                                                    Padding="8,6"
-                                                    Background="#E74C3C"
-                                                    Foreground="White"
+                                            <Button Content="Отклонить" Padding="8,6"
+                                                    Background="#E74C3C" Foreground="White"
                                                     Tag="{Binding RequestId}"
                                                     Click="BtnRejectUnfreeze_Click"/>
                                         </StackPanel>
@@ -108,8 +90,7 @@
                     </ItemsControl>
                 </StackPanel>
 
-                <StackPanel x:Name="PanelRoles"
-                            Visibility="Collapsed">
+                <StackPanel x:Name="PanelRoles" Visibility="Collapsed">
                     <ItemsControl x:Name="RoleRequestsList">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
@@ -120,23 +101,15 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0"
-                                                   Text="{Binding UserLogin}"
-                                                   FontWeight="Bold"
-                                                   VerticalAlignment="Center"/>
-                                        <StackPanel Grid.Column="1"
-                                                    Orientation="Horizontal">
-                                            <Button Content="Одобрить"
-                                                    Padding="8,6"
-                                                    Margin="0,0,8,0"
-                                                    Background="#27AE60"
-                                                    Foreground="White"
+                                        <TextBlock Grid.Column="0" Text="{Binding UserLogin}"
+                                                   FontWeight="Bold" VerticalAlignment="Center"/>
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                            <Button Content="Одобрить" Padding="8,6" Margin="0,0,8,0"
+                                                    Background="#27AE60" Foreground="White"
                                                     Tag="{Binding RequestId}"
                                                     Click="BtnApproveRole_Click"/>
-                                            <Button Content="Отклонить"
-                                                    Padding="8,6"
-                                                    Background="#E74C3C"
-                                                    Foreground="White"
+                                            <Button Content="Отклонить" Padding="8,6"
+                                                    Background="#E74C3C" Foreground="White"
                                                     Tag="{Binding RequestId}"
                                                     Click="BtnRejectRole_Click"/>
                                         </StackPanel>
@@ -147,8 +120,7 @@
                     </ItemsControl>
                 </StackPanel>
 
-                <StackPanel x:Name="PanelUsers"
-                            Visibility="Collapsed">
+                <StackPanel x:Name="PanelUsers" Visibility="Collapsed">
                     <ItemsControl x:Name="UsersList">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
@@ -159,25 +131,32 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <StackPanel Grid.Column="0">
-                                            <TextBlock Text="{Binding Login}"
-                                                       FontWeight="Bold"/>
+                                        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Login}" FontWeight="Bold"/>
                                             <TextBlock Text="{Binding RoleName}"
-                                                       Foreground="Gray"
-                                                       Margin="0,4,0,0"/>
+                                                       Foreground="Gray" Margin="0,4,0,0"/>
                                         </StackPanel>
-                                        <Button Grid.Column="1"
-                                                Content="{Binding FreezeLabel}"
-                                                Padding="8,6"
-                                                Tag="{Binding UserId}"
-                                                Click="BtnToggleFreeze_Click"/>
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal"
+                                                    VerticalAlignment="Center">
+                                            <Button Content="Сменить пароль"
+                                                    Padding="8,6" Margin="0,0,8,0"
+                                                    Tag="{Binding UserId}"
+                                                    Click="BtnChangePassword_Click"/>
+                                            <Button Content="Сменить роль"
+                                                    Padding="8,6" Margin="0,0,8,0"
+                                                    Tag="{Binding UserId}"
+                                                    Click="BtnChangeRole_Click"/>
+                                            <Button Content="{Binding FreezeLabel}"
+                                                    Padding="8,6"
+                                                    Tag="{Binding UserId}"
+                                                    Click="BtnToggleFreeze_Click"/>
+                                        </StackPanel>
                                     </Grid>
                                 </Border>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
                 </StackPanel>
-
             </StackPanel>
         </ScrollViewer>
     </Grid>
