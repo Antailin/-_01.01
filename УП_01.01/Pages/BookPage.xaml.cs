@@ -113,7 +113,8 @@ namespace УП_01._01.Pages
                 {
                     UserId = CurrentUser.User.UserId,
                     BookId = _bookId,
-                    Section = section
+                    Section = section,
+                    AddedAt = DateTime.Now
                 };
                 Core.Context.ReadingList.Add(newItem);
             }
