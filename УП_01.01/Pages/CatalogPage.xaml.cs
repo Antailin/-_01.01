@@ -53,9 +53,10 @@ namespace УП_01._01.Pages
                 BookId = b.BookId,
                 Title = b.Title,
                 DisplayName = b.Users?.DisplayName ?? "Неизвестен",
+                CoverPath = b.CoverPath,
                 AvgRating = b.Reviews.Any()
-                              ? b.Reviews.Average(r => r.Rating)
-                              : 0
+                   ? b.Reviews.Average(r => r.Rating)
+                   : 0
             }).ToList();
 
             ApplyFilters();
@@ -152,5 +153,6 @@ namespace УП_01._01.Pages
         public string Title { get; set; }
         public string DisplayName { get; set; }
         public double AvgRating { get; set; }
+        public string CoverPath { get; set; }
     }
 }
