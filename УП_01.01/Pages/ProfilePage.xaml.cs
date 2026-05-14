@@ -100,7 +100,8 @@ namespace УП_01._01.Pages
             {
                 UserId = CurrentUser.User.UserId,
                 Reason = "Прошу разморозить аккаунт",
-                Status = "Обработка"
+                Status = "Обработка",
+                CreatedAt = DateTime.Now
             };
 
             Core.Context.UnfreezeRequests.Add(request);
